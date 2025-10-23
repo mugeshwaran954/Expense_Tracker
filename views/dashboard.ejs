@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Expense Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="text-purple"><i class="fas fa-chart-pie me-2"></i>Dashboard</h3>
+      <div>
+        <a href="/expenses/monthly-report" class="btn btn-purple me-2"><i class="fas fa-chart-line me-2"></i>Monthly Report</a>
+        <a href="/expenses/add" class="btn btn-purple"><i class="fas fa-plus me-2"></i>Add Expense</a>
+
+      </div>
+    </div>
+
+    <!-- Chart Card -->
+    <div class="card shadow-lg p-4 mb-4">
+      <canvas id="expenseChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Recent Expenses Table -->
+    <div class="card shadow-lg p-4">
+      <h4 class="mb-3 text-purple"><i class="fas fa-list me-2"></i>Recent Expenses</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Amount ($)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% expenses.forEach(exp => { %>
+            <tr>
+              <td><%= exp.date.toISOString().split('T')[0] %></td>
+              <td><%= exp.category %></td>
+              <td><%= exp.description || '-' %></td>
+              <td><%= Number(exp.amount).toFixed(2) %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Chart JS -->
+  <script>
+    const ctx = document.getElementById('expenseChart').getContext('2d');
+    const data = {
+      labels: <%- JSON.stringify(expenses.map(e => e.category)) %>,
+      datasets: [{
+        label: 'Expenses ($)',
+        data: <%- JSON.stringify(expenses.map(e => Number(e.amount))) %>,
+        backgroundColor: [
+          '#5b2eae',
+          '#8a4ff7',
+          '#c285ff',
+          '#d9b3ff',
+          '#f0e5ff'
+        ],
+        borderColor: '#fff',
+        borderWidth: 1
+      }]
+    };
+
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: '#222', font: { size: 14 } }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

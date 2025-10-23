@@ -1,0 +1,46 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6f5fb;
+  color: #222;
+}
+
+.text-purple {
+  color: #5b2eae !important;
+}
+
+.btn-purple {
+  background-color: #5b2eae;
+  color: #fff;
+  border: none;
+}
+
+.btn-purple:hover {
+  background-color: #461f8b;
+  color: #fff;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 12px;
+}
+
+/* Table */
+table th {
+  background-color: #5b2eae;
+  color: #fff;
+}
+
+table td {
+  vertical-align: middle;
+}
+
+/* Inputs */
+input, select, textarea {
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 10px; }
+}
