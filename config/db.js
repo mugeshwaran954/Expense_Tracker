@@ -1,18 +1,13 @@
 const mysql = require('mysql2');
-
-const db = mysql.createConnection({
-  host: 'localhost',       // or your AWS RDS endpoint if deployed
-  user: 'root',            // replace with your MySQL username
-  password: 'Busky@2018#',            // replace with your MySQL password (default blank in XAMPP)
+const connection = mysql.createConnection({
+  host: 'expense-tracker-db.cpy08604cofv.eu-north-1.rds.amazonaws.com',
+  user: 'admin',
+  password: 'Busky12345',
   database: 'expense_tracker'
 });
 
-db.connect((err) => {
-  if (err) {
-    console.error('❌ MySQL connection failed:', err);
-  } else {
-    console.log('✅ MySQL Connected...');
-  }
+connection.connect(err => {
+  if (err) throw err;
+  console.log("✅ Connected to AWS RDS Database");
 });
-
-module.exports = db;
+module.exports = connection;
