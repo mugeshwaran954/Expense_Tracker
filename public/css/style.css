@@ -1,46 +1,153 @@
-/* General Styles */
+/* public/css/style.css */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #5b2eae;
+  --primary-light: #8a4ff7;
+  --primary-dark: #461f8b;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --grey: #6c757d;
+  --border-radius: 0.75rem;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f6f5fb;
-  color: #222;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.text-purple {
-  color: #5b2eae !important;
+/* --- Navbar --- */
+.navbar {
+  box-shadow: var(--shadow-sm);
+  background-color: #fff;
 }
 
-.btn-purple {
-  background-color: #5b2eae;
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary) !important;
+}
+
+.navbar .nav-link {
+  color: var(--grey);
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--primary);
+}
+
+.navbar .dropdown-item:active {
+  background-color: var(--primary);
+}
+
+/* --- Main Content --- */
+/* This creates the "fixed window size" feel by constraining the width */
+main.container {
+  flex-grow: 1;
+  max-width: 1140px; /* You can adjust this value */
+}
+
+/* --- Buttons --- */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline-primary {
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
   color: #fff;
-  border: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
-.btn-purple:hover {
-  background-color: #461f8b;
-  color: #fff;
-}
-
-/* Card Styles */
+/* --- Cards --- */
 .card {
-  border-radius: 12px;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
 }
 
-/* Table */
-table th {
-  background-color: #5b2eae;
-  color: #fff;
+.card:hover {
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
-table td {
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--primary-dark);
+}
+
+/* --- Forms --- */
+.form-control, .form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(91, 46, 174, 0.25);
+}
+
+/* --- Login/Register Page --- */
+.auth-card {
+  max-width: 450px;
+  margin: 5rem auto;
+}
+
+/* --- Tables --- */
+.table {
   vertical-align: middle;
 }
 
-/* Inputs */
-input, select, textarea {
-  border-radius: 8px;
+.table thead th {
+  background-color: var(--primary);
+  color: #fff;
+  border-bottom: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .container { padding: 10px; }
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(91, 46, 174, 0.03);
+}
+
+/* --- Chart Wrapper --- */
+/* This makes the chart responsive and fit its container */
+.chart-container {
+  position: relative;
+  height: 350px; /* Default height */
+  width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #fff;
+  box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
