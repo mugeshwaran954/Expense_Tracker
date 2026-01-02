@@ -231,6 +231,7 @@ http://<EC2-Public-IP>:3000
 
 The Expense Tracker Web App demonstrates a complete real-world AWS deployment workflow, integrating compute, database, notification, and monitoring services.
 It provides a secure, scalable, and automated solution for personal finance tracking using modern cloud technologies.
+
 ---
 ## 📄 License
 
