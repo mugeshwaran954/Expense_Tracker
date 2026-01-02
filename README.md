@@ -224,3 +224,15 @@ Add AWS SES for monthly report emails.
 Implement multi-user analytics dashboards.
 
 Add budget alerts and AI-based spending predictions.
+<img width="975" height="398" alt="image" src="https://github.com/user-attachments/assets/9ebf7558-4378-4341-88da-5d8a9db35f8f" />
+
+<img width="975" height="397" alt="image" src="https://github.com/user-attachments/assets/0578e99d-3c3b-4e29-ab13-e50a3e7e928b" />
+
+<img width="975" height="411" alt="image" src="https://github.com/user-attachments/assets/5f79c8c5-470b-477a-ba67-8cd5b9d2c92d" />
+
+<img width="975" height="405" alt="image" src="https://github.com/user-attachments/assets/6c2084db-5edb-45e4-8d83-2fd34fe77436" />
+
+<img width="975" height="408" alt="image" src="https://github.com/user-attachments/assets/b9621bd0-256d-40ea-a123-204fff22d379" />
+
+
+
