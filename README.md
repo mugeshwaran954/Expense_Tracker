@@ -236,3 +236,15 @@ It provides a secure, scalable, and automated solution for personal finance trac
 ## 📄 License
 
 This project is developed for academic and learning purposes.
+
+---
+
+## Screenshots
+
+<img width="975" height="398" alt="image" src="https://github.com/user-attachments/assets/273cbf64-fce6-489b-b5c1-2c8fb2a18554" />
+<img width="975" height="397" alt="image" src="https://github.com/user-attachments/assets/43fe7a27-46b4-49ba-85d2-c3fa3198d4c6" />
+<img width="975" height="411" alt="image" src="https://github.com/user-attachments/assets/e34d4c7a-6e21-4674-bec5-988cec8cc7e4" />
+<img width="975" height="405" alt="image" src="https://github.com/user-attachments/assets/4a2b0f96-6321-4ece-8a90-7834e4556062" />
+<img width="975" height="408" alt="image" src="https://github.com/user-attachments/assets/3f8cc176-a6d2-4e8a-a74b-7356e030b24f" />
+
+
