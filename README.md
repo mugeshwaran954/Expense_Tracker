@@ -234,5 +234,11 @@ Add budget alerts and AI-based spending predictions.
 
 <img width="975" height="408" alt="image" src="https://github.com/user-attachments/assets/b9621bd0-256d-40ea-a123-204fff22d379" />
 
+This project was developed by:
+
+-Mugeshwaran E
+
+-Varsha K
+
 
 
